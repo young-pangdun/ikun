@@ -45,13 +45,12 @@ export default {
       } else if (index == 3) {
         this.activeTitle = "left: 267px;";
         this.$router.push({
-          name: "hello",
+          name: "lawyer",
         });
       } else if (index == 4) {
         this.activeTitle = "left: 362px;";
-        this.$router.push({
-          name: "xixi",
-        });
+        location.href='https://young-pangdun.github.io/love/'
+        // location.href='../hello/index.html'
       } else if (index == 5) {
         this.activeTitle = "left: 467px;";
         this.$router.push({
@@ -77,6 +76,10 @@ export default {
 .logo {
   color: #fff;
   cursor: pointer;
+  h1 {
+    font-family: "YouShe";
+    letter-spacing: 2px;
+  }
 }
 .nav {
   position: relative;

@@ -211,28 +211,28 @@ export default {
         });
     },
     submit() {
-      this.$refs[ruleForm].validate((valid) => {
-        if (valid) {
-          alert("submit!");
-        } else {
-          console.log("error submit!!");
-          return false;
-        }
-      });
+      // this.$refs[ruleForm].validate((valid) => {
+      //   if (valid) {
+      //     alert("submit!");
+      //   } else {
+      //     console.log("error submit!!");
+      //     return false;
+      //   }
+      // });
       // loading加载
-      //   const loading = this.$loading({
-      //     lock: true,
-      //     text: "Loading",
-      //     spinner: "el-icon-loading",
-      //     background: "rgba(0, 0, 0, 0.7)",
-      //   });
-      //   setTimeout(() => {
-      //     loading.close();
-      //     this.dialogFormVisible = false;
-      //     this.$message.success(
-      //       "恭喜你成为ikun星球的一份子，今天哥哥下的蛋你多吃两个！"
-      //     );
-      //   }, 2000);
+        const loading = this.$loading({
+          lock: true,
+          text: "Loading",
+          spinner: "el-icon-loading",
+          background: "rgba(0, 0, 0, 0.7)",
+        });
+        setTimeout(() => {
+          loading.close();
+          this.dialogFormVisible = false;
+          this.$message.success(
+            "恭喜你成为ikun星球的一份子，今天哥哥下的蛋你多吃两个！"
+          );
+        }, 2000);
     },
   },
 };

@@ -3,7 +3,9 @@ import VueRouter from "vue-router";
 import Home from "../views/Home";
 import Join from "../views/Join";
 import News from "../views/News";
+import Lawyer from "../views/Lawyer";
 import Support from "../views/Support";
+import Love from "../views/Love";
 
 import Video from "../views/Support/Video";
 import Pic from "../views/Support/Pic";
@@ -47,10 +49,15 @@ const routes = [
     component: Join,
   },
   {
+    path: "/love",
+    name: "love",
+    component: Love,
+  },
+  {
     path: "/support",
     name: "support",
     component: Support,
-    redirect:"/support/emote",
+    redirect: "/support/emote",
     children: [
       {
         path: "video",
@@ -78,6 +85,11 @@ const routes = [
         component: Avatar,
       },
     ],
+  },
+  {
+    path: "/lawyer",
+    name: "lawyer",
+    component: Lawyer,
   },
 ];
 
